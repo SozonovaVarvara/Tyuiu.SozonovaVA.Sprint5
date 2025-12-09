@@ -5,7 +5,20 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task6.V6.Lib
     {
         public int LoadFromDataFile(string path)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            string[] a = File.ReadAllText(path).Split(' ');
+
+            foreach (string s in a)
+            {
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (char.IsLower(s[j]) && s[j] >= 'а' && s[j] <= 'я')
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
         }
     }
 }
