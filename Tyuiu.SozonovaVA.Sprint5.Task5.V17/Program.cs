@@ -23,7 +23,7 @@ class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = $@"C:\Users\Varvara\source\repos\Tyuiu.SozonovaVA.Sprint5\Tyuiu.SozonovaVA.Sprint5.Task5.V17\bin\Debug\net8.0\InPutDataFileTask5V17.txt";
+        string path = $@"C:\InPutDataFileTask5V17.txt";
 
         Console.WriteLine("Данные находятся в файле: " + path);
 
