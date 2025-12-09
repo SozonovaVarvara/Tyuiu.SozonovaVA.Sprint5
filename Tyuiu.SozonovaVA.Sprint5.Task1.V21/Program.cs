@@ -3,24 +3,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        int startValue = -5;
+        int stopValue = 5;
 
         DataService ds = new DataService();
 
-        Console.Title = "Cпринт #5 | Выполнила: Созонова В. А. | АСОиУб-25-1";
-        Console.WriteLine("****************************************************************************");
-        Console.WriteLine("* Спринт #5                                                                *");
-        Console.WriteLine("* Тема: Операции сравнения                                                 *");
-        Console.WriteLine("* Задание #1                                                               *");
-        Console.WriteLine("* Вариант #21                                                              *");
-        Console.WriteLine("* Выполнила: Созонова Варвара Андреевна | АСОиУб-25-1                      *");
-        Console.WriteLine("****************************************************************************");
-        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
-        Console.WriteLine("****************************************************************************");
-        int startValue = -5;
-        int stopValue = 5;
-        Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
-        Console.WriteLine("****************************************************************************");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+        Console.WriteLine("***************************************************************************");
 
         string res = ds.SaveToFileTextData(startValue, stopValue);
 
