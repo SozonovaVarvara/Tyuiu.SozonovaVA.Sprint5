@@ -7,6 +7,11 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task4.V17.Test
         [TestMethod]
         public void TestMethod1()
         {
+            string path = @"C:\DataSprint5\InPutDataFileTask4V17.txt";
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            Assert.AreEqual(true, fileExists);
         }
     }
 }
