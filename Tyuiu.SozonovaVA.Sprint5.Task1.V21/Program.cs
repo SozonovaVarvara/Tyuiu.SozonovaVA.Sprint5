@@ -3,8 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int startValue = -5;
-        int stopValue = 5;
+        
 
         DataService ds = new DataService();
 
@@ -16,6 +15,10 @@ class Program
         Console.WriteLine("* Вариант #21                                                              *");
         Console.WriteLine("* Выполнила: Созонова Варвара Андреевна | АСОиУб-25-1                      *");
         Console.WriteLine("****************************************************************************");
+        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
+        Console.WriteLine("****************************************************************************");
+        int startValue = -5;
+        int stopValue = 5;
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
         Console.WriteLine("****************************************************************************");
 
