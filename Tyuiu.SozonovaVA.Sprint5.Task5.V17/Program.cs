@@ -20,10 +20,10 @@ class Program
         Console.WriteLine("* вывести на консоль. У вещественных значений округлить до трёх знаков    *");
         Console.WriteLine("* после запятой.                                                          *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
+        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt";
+        string path = $@"C:\Users\Varvara\source\repos\Tyuiu.SozonovaVA.Sprint5\Tyuiu.SozonovaVA.Sprint5.Task5.V17\bin\Debug\net8.0\DataSprint5\InPutDataFileTask5V17";
 
         Console.WriteLine(" Данные находятся в файле : " + path);
 

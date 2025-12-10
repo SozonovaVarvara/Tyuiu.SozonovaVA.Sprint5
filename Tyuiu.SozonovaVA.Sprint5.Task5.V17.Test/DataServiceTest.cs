@@ -7,7 +7,7 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt";
+            string path = @"C:\Users\Varvara\source\repos\Tyuiu.SozonovaVA.Sprint5\Tyuiu.SozonovaVA.Sprint5.Task5.V17\bin\Debug\net8.0\DataSprint5\InPutDataFileTask5V17";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -18,7 +18,7 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Test
         [TestMethod]
         public void CheckLoadFromDataFile()
         {
-            string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt";
+            string path = @"C:\Users\Varvara\source\repos\Tyuiu.SozonovaVA.Sprint5\Tyuiu.SozonovaVA.Sprint5.Task5.V17\bin\Debug\net8.0\DataSprint5\InPutDataFileTask5V17";
 
             DataService ds = new DataService();
             double count = 2;
