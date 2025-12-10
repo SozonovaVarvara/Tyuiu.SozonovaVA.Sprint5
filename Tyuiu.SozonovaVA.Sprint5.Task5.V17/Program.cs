@@ -24,15 +24,16 @@ class Program
         Console.WriteLine("***************************************************************************");
 
         string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt";
-        Console.WriteLine("Данные находятся в файле: " + path);
 
-        Console.WriteLine();
+        Console.WriteLine(" Данные находятся в файле : " + path);
+
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
+
         double res = ds.LoadFromDataFile(path);
-        Console.WriteLine("Сумма всех простых целых чисел равна " + res);
+        Console.WriteLine("Сумма элементов файла : " + res);
         Console.ReadKey();
     }
 }
