@@ -24,7 +24,7 @@ class Program
         Console.WriteLine("***************************************************************************");
 
         string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask5V17.txt" });
-        //string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt";
+        //string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt"; 
 
         Console.WriteLine(" Данные находятся в файле : " + path);
 
