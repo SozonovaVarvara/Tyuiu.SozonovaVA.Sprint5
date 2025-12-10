@@ -7,12 +7,26 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task3.V26.Test
         [TestMethod]
         public void TestMethod1()
         {
-            //string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.txt" });
-            string path = @"C:\Users\Varvara\source\repos\Tyuiu.SozovovaVA.Sprint5\Tyuiu.SozonovaVA.Sprint5.Task3.V26\bin\Debug\net8.0\OutPutFileTask3.txt";
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            bool wait = true;
-            Assert.AreEqual(wait, fileExists);
+            DataService ds = new DataService();
+            int x = 2; // Ваше значение X
+
+            // Расчет ожидаемого результата вручную (или программно для теста)
+            double wait = 0.7 * Math.Pow(x, 3) + 1.52 * Math.Pow(x, 2);
+            wait = Math.Round(wait, 3); // Округление до 3 знаков
+
+            string path = ds.SaveToFileTextData(x);
+
+            // Проверка существования файла
+            Assert.IsTrue(File.Exists(path));
+
+            double result;
+            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+            {
+                result = reader.ReadDouble();
+            }
+
+            // Проверка содержимого файла
+            Assert.AreEqual(wait, result);
         }
     }
 }

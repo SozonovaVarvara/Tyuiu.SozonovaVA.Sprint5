@@ -13,21 +13,31 @@ class Program
         Console.WriteLine("*Выполнила: Созонова Варвара Андреевна| АСОиУб-25-1                         *");
         Console.WriteLine("****************************************************************************");
         Console.WriteLine("*УСЛОВИЕ:                                                                  *");
-        Console.WriteLine("* Дано выражение , вычислить его значение при x = 2, результат сохранить в *");
-        Console.WriteLine("* бинарный файл OutPutFileTask3.bin и вывести на консоль. Округлить до     *");
-        Console.WriteLine("* трёх знаков после запятой.                                               *");
-        Console.WriteLine("****************************************************************************");
-        Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                          *");
-        Console.WriteLine("****************************************************************************");
-        int x = 2;
-        Console.WriteLine("x = " + x);
+        Console.WriteLine("* Дано выражение F(x) = 0.7x^3 + 1.52x^2. Вычислить значение              *");
+        Console.WriteLine("* при x = 2, результат сохранить в бинарный файл OutPutFileTask3.bin      *");
+        Console.WriteLine("* и вывести на консоль. Округлить до трёх знаков после запятой.           *");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+        Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine("****************************************************************************");
-        Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
-        Console.WriteLine("****************************************************************************");
-        string res = ds.SaveToFileTextData(x);
-        Console.WriteLine("Файл:" + res);
-        Console.WriteLine("Создан!");
+        int x = 2; // Ваше значение X
+        Console.WriteLine($"x = {x}");
+
+        Console.WriteLine();
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+        Console.WriteLine("***************************************************************************");
+        string path = ds.SaveToFileTextData(x);
+
+        double result;
+        using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+        {
+            result = reader.ReadDouble();
+        }
+
+        Console.WriteLine($"Значение функции F(x) = {result}");
+        Console.WriteLine($"Результат сохранён в файл: {path}");
+
         Console.ReadKey();
     }
 }

@@ -7,14 +7,22 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task3.V26.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.txt";
-            double y = 0.7 * Math.Pow(x, 3) + 1.52 * Math.Pow(x, 2);
-            y = Math.Round(y, 3);
-            using (BinaryWriter write = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
+            // Используем Path.GetTempPath() для получения временной директории
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
+
+            // Вычисление значения выражения F(x) = 0.7x^3 + 1.52x^2
+            // при x = 2
+            double result = 0.7 * Math.Pow(x, 3) + 1.52 * Math.Pow(x, 2);
+
+            // Округление до трех знаков после запятой
+            result = Math.Round(result, 3);
+
+            // Запись результата в бинарный файл
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
             {
-                write.Write(BitConverter.GetBytes(y));
+                writer.Write(result);
             }
+
             return path;
         }
     }
