@@ -9,12 +9,26 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
+                double n;
+                int c;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    res = res + Convert.ToDouble(line);
+                    c = 0;
+                    n = Convert.ToDouble(line);
+                    for (int i = 1; i <= n; i++)
+                    {
+                        if (n % i == 0)
+                        {
+                            c++;
+                        }
+                    }
+                    if (c == 2)
+                    {
+                        res += n;
+                    }
                 }
+                return res;
             }
-            return res;
         }
     }
 }

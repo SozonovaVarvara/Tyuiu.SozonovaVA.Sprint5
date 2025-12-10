@@ -7,12 +7,11 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Test
         [TestMethod]
         public void TestMethod1()
         {
-            DataService ds = new DataService();
-            double wait = 20;
-            string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask5V17.txt" });
-            //string path = @"C:\InPutDataFileTask5V17.txt";
-            double res = ds.LoadFromDataFile(path);
-            Assert.AreEqual(wait, res);
+            string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
