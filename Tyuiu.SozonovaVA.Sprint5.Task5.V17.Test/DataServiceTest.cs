@@ -9,7 +9,8 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Test
         {
             DataService ds = new DataService();
             double wait = 20;
-            string path = @"C:\InPutDataFileTask5V17.txt";
+            string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask5V17.txt" });
+            //string path = @"C:\InPutDataFileTask5V17.txt";
             double res = ds.LoadFromDataFile(path);
             Assert.AreEqual(wait, res);
         }
