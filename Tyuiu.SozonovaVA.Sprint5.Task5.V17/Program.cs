@@ -20,7 +20,7 @@ class Program
         Console.WriteLine("* вывести на консоль. У вещественных значений округлить до трёх знаков    *");
         Console.WriteLine("* после запятой.                                                          *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
         Console.WriteLine("***************************************************************************");
 
         string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt";
