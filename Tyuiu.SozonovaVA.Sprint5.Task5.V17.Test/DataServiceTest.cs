@@ -19,7 +19,7 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Test
         [TestMethod]
         public void CheckLoadFromDataFile()
         {
-            //string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask5V17.txt" });
+            
             string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt";
 
             DataService ds = new DataService();
