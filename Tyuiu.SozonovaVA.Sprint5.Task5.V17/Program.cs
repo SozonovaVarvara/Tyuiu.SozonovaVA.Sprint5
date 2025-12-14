@@ -23,18 +23,13 @@ class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask5V17.txt" });
-        //string path = $@"C:\DataSprint5\InPutDataFileTask5V17.txt"; 
-
-        Console.WriteLine(" Данные находятся в файле : " + path);
-
+        string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt ";
+        Console.WriteLine("Данные находятся в файле:  " + path);
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-
-
         double res = ds.LoadFromDataFile(path);
-        Console.WriteLine("Сумма элементов файла : " + res);
+        Console.WriteLine("Сумма всех простых целых чисел в файле = " + res);
         Console.ReadKey();
     }
 }

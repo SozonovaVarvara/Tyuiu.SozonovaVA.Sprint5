@@ -11,24 +11,15 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if ((Convert.ToInt32(Convert.ToDouble(line)) == Convert.ToDouble(line)) && (Convert.ToDouble(line) >= 0))
-                    {
-                        break;
-                    }
-                    else
+                    int number;
+                    if ((!int.TryParse(line, out number) || Convert.ToDouble(line) != 2) && Convert.ToDouble(line) != 3 && Convert.ToDouble(line) != 5 && Convert.ToDouble(line) != 7 && Convert.ToDouble(line) != 11 && Convert.ToDouble(line) != 13 && Convert.ToDouble(line) != 17)
                     {
                         continue;
                     }
-
-
-                }
-                res = 0;
-                for (int i = 1; i <= Convert.ToDouble(line); i++)
-                {
                     res = res + Convert.ToDouble(line);
                 }
+                return res;
             }
-            return res;
         }
     }
 }
