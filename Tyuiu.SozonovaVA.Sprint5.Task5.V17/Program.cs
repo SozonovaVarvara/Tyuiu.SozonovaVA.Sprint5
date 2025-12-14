@@ -22,8 +22,8 @@ class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-
-        string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt ";
+        string path = @"C:\Users\Varvara\source\repos\Tyuiu.SozonovaVA.Sprint5\DataSprint5\InPutDataFileTask5V17.txt";
+        //string path = @"C:\DataSprint5\InPutDataFileTask5V17.txt ";
         Console.WriteLine("Данные находятся в файле:  " + path);
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
