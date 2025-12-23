@@ -7,22 +7,27 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Lib
         {
             double sum = 0;
             string line;
-            using (StreamReader reader = new StreamReader(path))
+            string Data = File.ReadAllText(path);
+            string[] mas = Data.Split(' ');
+            
+            //using (StreamReader reader = new StreamReader(Data))
+            foreach (string value  in mas)
             {
-                while ((line = reader.ReadLine()) != null)
-                {
 
-                    line = line.Replace(".", ",");
-                   
-                    for (int i = 2; i < Convert.ToDouble(line); i++)
+                //while ((line = reader.ReadLine()) != null)
+                {
+                    
+                    string value1 = value.Replace(".", ",");
+
+                    for (int i = 2; i < Convert.ToDouble(value1); i++)
                     {
-                        if (Convert.ToDouble(line) % i == 0)
+                        if (Convert.ToDouble(value1) % i == 0)
                         {
                             return 0;
                         }
                         else
                         {
-                            sum = sum + Convert.ToDouble(line);
+                            sum = sum + Convert.ToDouble(value1);
                         }
 
                     }
