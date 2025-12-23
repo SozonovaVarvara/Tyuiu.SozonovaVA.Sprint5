@@ -28,6 +28,7 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Lib
                         else
                         {
                             sum = sum + Convert.ToDouble(value1);
+                            break;
                         }
 
                     }
