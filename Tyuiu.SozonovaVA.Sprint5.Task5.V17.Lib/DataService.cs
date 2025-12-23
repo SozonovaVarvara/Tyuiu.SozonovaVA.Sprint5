@@ -12,7 +12,7 @@ namespace Tyuiu.SozonovaVA.Sprint5.Task5.V17.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
 
-                    line=line.Replace(".", ",");
+                    line = line.Replace(".", ",");
                    
                     for (int i = 2; i < Convert.ToDouble(line); i++)
                     {
